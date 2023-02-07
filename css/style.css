@@ -36,6 +36,7 @@ max-width: 100%;
 height: auto;
 }
 .container { 
+width: 100%;
 max-width: 1158px;
 padding: 0 15px; 
 margin: 0 auto; 
@@ -44,16 +45,16 @@ margin: 0 auto;
 display: flex;
 gap: 40px;
 }
+.header-section{
+background: var(--main-bg-color);
+border-bottom: 1px solid var(--footer-text);
+}
 
 .header-container{
 display: flex;
 align-items: center;
 box-sizing: border-box;
-height: 72px;
-left: 0px;
-top: 0px;
-background: var(--main-bg-color);
-border-bottom: 1px solid var(--footer-text);
+
 }
 
 .header-navigation{
@@ -67,7 +68,7 @@ margin-right: auto;
 font-family: 'Raleway', sans-serif;
 font-style: normal;
 text-transform: uppercase;
-font-weight: 800px;
+font-weight: 800;
 font-size: 18px;
 line-height: 1.33;
 color: var(--main-text-color);
@@ -77,7 +78,7 @@ margin-right: 76px;
 font-family: 'Raleway', sans-serif;
 font-style: normal;
 text-transform: uppercase;
-font-weight: 800px;
+font-weight: 800;
 font-size: 18px;
 line-height: 1.33;
 color:var(--btn-text-color);
@@ -155,41 +156,36 @@ padding-bottom: 21px;
 .phone:focus{
 color: var(--btn-text-color);
 }
-.hero-section{
-height: 600px;
+
+.section-hero{
+padding-top: 188px;
+padding-bottom: 188px;
 background-color: var(--second-text-color);
 }
 
-.hero{
-
-}
 
 .title{
 font-size: 56px;
 line-height: 1.07;
 color:var(--title-text-color);
 max-width: 494px;
-padding-top: 188px;
-padding-left: 332px;
-padding-right: 332px;
+margin: 0 auto;
+margin-bottom: 48px;
 }
 
 .title-button{
-position: absolute;
 background-color:var(--btn-text-color);
 font-family: 'Roboto', sans-serif;
-font-style: normal;
+display: block;
 font-size: 16px;
 line-height: 1.5;
 color:var(--title-text-color);
 min-width: 169px;
 height: 56px;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border:none;
 border-radius: 4px;
-padding: 0px;
-margin-top: 48px;
-margin-left: 495px;
-margin-right: 495px;
+margin: 0 auto;
 }
 .title-button:hover,
 .title-button:focus{
@@ -209,73 +205,81 @@ color: var(--title-text-color)
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+.section-list{
+padding-bottom: 120px;
+padding-top: 120px;
+}
 .list{
 display: flex;
 gap: 24px;
-padding-bottom: 120px;
-padding-top: 120px;
 }
 .post-title{
 font-size: 20px;
 line-height: 1.2;
 color:var(--main-text-color);
-padding-bottom: 8px;
+margin-bottom: 8px;
 }
 .post-title-text{
 font-size: 16px;
 line-height: 1.5;
 color: var(--second-text-color);
 }
+
+
+.section-images{
+padding-bottom: 120px;
+text-align: center;
+}
+
 .images-title{
-max-width: 323px;
 font-size: 36px;
 line-height: 1.11;
 color: var(--main-text-color);
-margin-left: 418px;
+margin-bottom: 72px;
 }
-
 
 .images{
 display: flex;
 gap: 24px;
-width: 1128px;
-padding-left: 15px;
-padding-right: 15px;
-padding-top: 72px;
-padding-bottom: 120px;
 }
 
-.team-section{
-    background-color: var(--btn-bg-color);
-    height: 732px;
-    
+.section-team{
+background-color: var(--btn-bg-color);
+padding-top: 120px;
+padding-bottom: 120px;
+text-align: center;
 }
 
 .team-title{
 font-size: 36px;
 line-height: 1.11;
 color: var(--main-text-color);
-padding-top: 120px;
-padding-bottom: 72px;
-padding-left: 498px;
-padding-right: 498px;
+margin-bottom: 72px;
 }
+
+.team{
+display: flex;
+gap: 24px;
+}
+
 .team-card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 264px;
-    height: 380px; 
-    background: var(--main-bg-color);
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    border-radius: 0px 0px 4px 4px;
+display: flex;
+flex-direction: column;
+align-items: center;
+background: var(--main-bg-color);
+box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+border-radius: 0px 0px 4px 4px;
 }
-.post-team-title{
+.team-info{
 padding-top: 32px;
-padding-bottom: 8px;
+padding-bottom: 32px;
+}
+
+.post-team-title{
 font-size: 20px;
 line-height: 1.2;
-color:var(--main-text-color);    
+color:var(--main-text-color);
+margin-bottom: 8px;    
 }
 
 .team-text{
@@ -283,30 +287,23 @@ font-size: 16px;
 line-height: 1.5;
 color: var(--second-text-color); 
 }
-.team{
-display: flex;
-gap: 24px;
-padding-left: 15px;
-padding-right: 15px;
+
+
+/*portfolio*/
+.card-section{
+padding-top: 96px;
 padding-bottom: 120px;
-
 }
 
-
-.logo-text{
-font-size: 16px;
-line-height: 1.5;
-color:var(--footer-text);   
-}
 .button-portfolio{
 display: flex;
 gap: 24px;
 flex-direction: row;
 justify-content: center;
 align-items: center;
-padding-top: 96px;
-padding-bottom: 72px;
+margin-bottom: 72px;
 }
+
 .button-all{
 background-color:var(--btn-bg-color);
 font-family: 'Roboto', sans-serif;
@@ -401,61 +398,64 @@ color: var(--btn-text-color-active);
 .portfolio-instrument{
 display: flex;
 flex-wrap: wrap;
-padding-bottom: 120px;
 }
+
 .flex-element{
 flex-basis: calc((100% - 48px) / 3);
 margin-right: 24px;
 margin-bottom: 48px;
 background: var(--main-bg-color);
-border: 1px solid var(--footer-text);
 }
+
 .flex-element:nth-child(3n){
 margin-right: 0;
 }
 .flex-element:nth-last-child(-n + 3){
-    margin-bottom: 0;
+margin-bottom: 0;
+}
+
+.image-info{
+border: 1px solid var(--footer-text);
+padding: 32px 0 32px 16px;
 }
 
 .post-images-title{
 font-size: 20px;
 line-height: 1.2;
 color:var(--main-text-color);
-padding-top: 32px;
-padding-bottom: 8px;
-padding-left: 16px;
+margin-bottom: 8px;
 }
+
 .images-text{
 font-size: 16px;
 line-height: 1.5;
-padding-bottom: 32px;
-padding-left: 16px;
 color: var(--second-text-color); 
 }
+
 .link{
 text-decoration: none;
 }
 .footer{
-height: 310px;
 background-color: var(--second-text-color);
+padding-top: 100px;
+padding-bottom: 100px;
 }
 .logo-footer{
 font-family: 'Raleway', sans-serif;
 font-style: normal;
 text-transform: uppercase;
 display: block;
-width: 115px;
-height: 22px;
-padding-bottom: 16px;
-font-weight: 800px;
+font-weight: 800;
 font-size: 18px;
+margin-bottom: 16px;
 line-height: 1.33;
 color: var(--main-bg-color);
 }
 .logo-text{
 max-width: 264px;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: var(--btn-text-color-active)
 }
-.footer-div{
-padding-top: 100px;
-padding-left: 156px;
-}
+
